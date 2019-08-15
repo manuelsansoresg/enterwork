@@ -1,99 +1,88 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.default')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+@section('content')
+    <div id="app"></div>
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-md-flex justify-content-between align-items-center hero">
+                    <div class="col-12 col-md-6 mt-4 mt-md-0">
+                        <img src="/img/construccion/construcccion.svg" alt="">
+                        <ul class="ul-header">
+                            <li>_Coworking Space</li>
+                            <li>_Meeting Rooms</li>
+                            <li>_Private Offices</li>
+                            <li>_Coffe Bar</li>
+                            <li>_Roof Garden</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4 offset-md-2 mt-4 mt-md-0">
+                        <h2 class="text-white title">Contacto</h2>
+                        <form id="contacto" autocomplete="off">
+                            <div class="mt-n4">
+                            <span class="input input--hoshi">
+                                <input class="input__field input__field--hoshi" name="nombre" type="text" id="input-4" />
+                                <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                    <span class="input__label-content input__label-content--hoshi">Nombre*</span>
+                                </label>
+                            </span>
+                            </div>
+                            <div class="mt-n4">
+                            <span class="input input--hoshi">
+                                <input class="input__field input__field--hoshi" name="email" type="text" id="input-4" />
+                                <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                    <span class="input__label-content input__label-content--hoshi">Correo electrónico*</span>
+                                </label>
+                            </span>
+                            </div>
+                            <div class="mt-n4">
+                             <span class="input input--hoshi">
+                                <input class="input__field input__field--hoshi" name="telefono" type="text" id="input-4" />
+                                <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                    <span class="input__label-content input__label-content--hoshi">Teléfono*</span>
+                                </label>
+                            </span>
+                            </div>
+                            <div class="mt-n4">
+                             <span class="input input--hoshi">
+                                 <textarea class="input__field input__field--hoshi" name="mensaje" id="" cols="30" rows="5"></textarea>
+                                <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                    <span class="input__label-content input__label-content--hoshi">Mensaje*</span>
+                                </label>
+                            </span>
+                            </div>
+                            <div class="" id="spinner-contacto" style="display: none">
+                                <div class="col-12 text-center mt-5">
+                                    <i class="fas fa-spinner fa-spin text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <a href="#" onclick="contacto()"><img class="footer__btn" src="/img/construccion/Enviar.svg" alt=""></a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="footer mt-5 mt-md-1">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col-5 col-md-2">
+                            <img class="" src="/img/construccion/Enter_2019.svg">
+                        </div>
+                        <div class="col-auto">
+                            <span class="text-white footer__text">Siguenos</span>
+                            <a href="https://www.facebook.com/EnterWorkMX" target="_blank"><img class="footer__social ml-3" src="/img/construccion/FB_Blanco.svg" alt=""></a>
+                            <a href="https://www.instagram.com/enter_work/" target="_blank">   <img class="footer__social ml-3" src="/img/construccion/IG_Blanco.svg" alt=""></a>
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
-    </body>
-</html>
+
+    </div>
+
+
+
+@endsection

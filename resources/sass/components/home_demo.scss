@@ -1,0 +1,77 @@
+body{
+    background-color: black;
+}
+
+.home{
+    min-height: 100%;
+    position: relative;
+}
+.hero{
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.title{
+    font-family: 'ObjectSans-Bold';
+    color: white;
+    font-size: 2.5em;
+}
+
+.demo{
+    min-height: 100vh;
+}
+
+.footer{
+    height: 50px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    &__text{
+        font-size: 0.9rem;
+    }
+    &__btn{
+        width: 120px;
+        transition: transform .2s; /* Animation */
+    }
+    &__btn:hover{
+        transform: scale(1.1);
+    }
+    &__social{
+        width: 20px;
+    }
+
+}
+
+.ul-header{
+    list-style: none;
+    position: absolute;
+    right: 20%;
+    color: $gray;
+    font-family: 'AnonymousPro';
+}
+
+@include media-breakpoint-down(sm) {
+    .hero{
+        padding-bottom: 100px;
+    }
+    .title{
+        font-size: 2em;
+    }
+    .footer{
+
+        &__social{
+            width: 15px;
+        }
+        &__btn{
+            width: 90px;
+        }
+    }
+
+    .ul-header{
+        position: relative;
+        right: 14%;
+        margin-top: 20px;
+    }
+}

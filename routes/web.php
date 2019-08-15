@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/contact', 'MailController@sendContact');
+
+
+Route::get('/home', function () {
+    return view('landing');
+});
