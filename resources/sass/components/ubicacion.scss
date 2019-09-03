@@ -1,0 +1,33 @@
+.ubicacion{
+    min-height: 100vh;
+    #map{
+        height: 70vh;
+    }
+    &__img{
+        width: 50%;
+    }
+}
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .ubicacion{
+        &__img{
+            width: 100%;
+        }
+        &__text-right{
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+}

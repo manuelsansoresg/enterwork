@@ -1,0 +1,78 @@
+.beneficios{
+    min-height: 100vh;
+    &__section2{
+        &__box{
+            padding: 20px 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &__box-yellow:hover{
+            background-color: $yellow;
+        }
+
+        &__box-green:hover{
+            background-color: $green;
+        }
+
+        &__box-pink:hover{
+            background-color: $pink;
+        }
+
+        &__box-blue:hover{
+            background-color: $blue;
+        }
+
+        &__box-pink2:hover{
+            background-color: $pink2;
+        }
+        &__title{
+            font-size: 1.5em;
+        }
+        &__icons{
+            width: 40px;
+            padding: 0px 10px;
+        }
+    }
+    &__section3{
+        &__icons{
+            width: 30px;
+            height: 30px;
+        }
+        &__description{
+            font-size: 0.8em;
+        }
+    }
+    &__section4{
+        .card{
+            border: none;
+
+        }
+        .card-header {
+            background-color: white;
+            border-bottom: 2px solid $black !important;
+        }
+    }
+}
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .beneficios{
+        .card-header{
+            padding: 0.75rem 5px;
+        }
+    }
+}

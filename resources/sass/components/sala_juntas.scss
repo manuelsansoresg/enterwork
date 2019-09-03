@@ -1,0 +1,44 @@
+.sala-juntas{
+    min-height: 100vh;
+    &__box{
+        background-color: $white;
+        margin-top: -80px;
+    }
+    &__icons{
+        width: 30px;
+        height: 30px;
+    }
+    &__description{
+        font-size: 0.8em;
+    }
+    &__section2{
+
+    }
+}
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .sala-juntas{
+        &__box{
+            margin-top: -150px;
+            background-color: transparent;
+            &__content{
+                width: 100%;
+                background-color: $white;
+                padding: 30px 10px;
+            }
+        }
+    }
+}

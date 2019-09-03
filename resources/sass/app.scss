@@ -7,6 +7,68 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import './components/menu';
+@import './components/buttons';
 @import './components/home_demo';
 @import './components/landing';
+@import './components/footer';
+@import './components/beneficios';
+@import './components/sala_juntas';
+@import './components/ubicacion';
+@import './components/contactanos';
+@import './components/input_materialize';
+@import './components/checbbox';
+@import './components/gracias';
+@import './components/animation/title';
+
 @import 'fonts';
+
+.title{
+    font-family: 'ObjectSans-Bold';
+    font-size: 2.1em;
+    color: $black;
+}
+
+.object-bold{
+    font-family: 'ObjectSans-Bold';
+}
+
+.bg-pink{
+    background-color: $pink;
+}
+
+.bg-pink2{
+    background-color: $pink2;
+}
+
+.bg-yellow{
+    background-color: $yellow;
+}
+
+.bg-green{
+    background-color: $green;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .title{
+        font-size: 1.5em;
+    }
+}

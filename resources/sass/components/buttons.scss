@@ -1,0 +1,80 @@
+.btn-warning{
+    font-family: 'ObjectSans-Bold';
+    border-radius: 18px;
+}
+
+
+
+.btn-primary{
+    font-family: 'ObjectSans-Bold';
+    border-radius: 18px;
+    background-color: $pink;
+    border: $pink;
+    color: $black;
+}
+
+.btn-pink2{
+    font-family: 'ObjectSans-Bold';
+    border-radius: 18px;
+    background-color: $pink2;
+    border: $pink2;
+    color: $black;
+}
+
+.btn-primary:hover{
+    background-color: $pink3;
+}
+
+.btn-info{
+    font-family: 'ObjectSans-Bold';
+    border-radius: 18px;
+    background-color: $pink2;
+    border: $pink2;
+    color: $black;
+}
+
+.btn-info:hover{
+    background-color: $pink4;
+}
+
+.btn-success{
+    font-family: 'ObjectSans-Bold';
+    border-radius: 18px;
+    background-color: $green;
+    border: $green;
+    color: $black;
+}
+
+.btn-sectionCircle{
+    padding: 10px 19px;
+    border-radius: 24px;
+}
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .btn-primary, .btn-warning, .btn-pink2{
+        padding: 1.1rem 0.75rem;
+        border-radius: 33px;
+        font-size: 1.6em;
+    }
+
+    .btn-sectionCircle {
+        padding: 20px 19px;
+        border-radius: 40px;
+    }
+    .btn{
+
+    }
+}

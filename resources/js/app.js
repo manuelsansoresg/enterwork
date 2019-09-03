@@ -27,8 +27,25 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+/*const app = new Vue({
     el: '#app',
-});
+});*/
 
+/* funcion quitar animacion*/
+window.testAnim = function(x, name_class) {
+    $('.'+name_class).addClass('animated '+x+' delay-1s');
+
+};
+/* funcion quitar animacion*/
+
+require ('./components/landing');
 require ('./components/contacto');
+require ('./components/beneficios');
+require ('./components/sala_juntas');
+require ('./components/ubicacion');
+require ('./components/contactanos');
+require ('./components/contactanos');
+require ('./components/input_materialize');
+require ('./components/checkbox');
+require ('./components/gracias');
+require ('./components/animate_title');

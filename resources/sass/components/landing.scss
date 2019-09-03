@@ -1,8 +1,221 @@
 body{
-    /*background-color: white;*/
+    background-color: white;
+    font-family: 'ObjectSans-Regular';
+    color: $black;
 }
 .landing{
+    #map{
+        height: 70vh;
+    }
     &__hero{
+       /* background: url("/img/landing/Imagen_Home.png") no-repeat center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;*/
 
-     }
+        &__box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -70px;
+            background-color: $yellow;
+            height: 150px;
+            font-size: 1.2em;
+            text-align: center;
+
+        }
+        &__box-content{
+            width: 50%;
+        }
+    }
+
+    &__section2{
+        &__content-icons{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: relative;
+            font-size: 1.2em;
+            font-family: 'ObjectSans-Bold';
+            text-align: center;
+            line-height: 17px;
+        }
+        &__icons{
+            width: 55px;
+            height: 50px;
+        }
+    }
+
+    &__section3{
+        &__img{
+            width: 10px;
+        }
+        &__title{
+            font-size: 1.2em;
+        }
+    }
+
+    &__section4{
+        &__img{
+            width: 30px;
+        }
+    }
+
+    &__section5{
+        background-color: $gray;
+        &__circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-family: 'ObjectSans-Bold';
+            text-align: center;
+            line-height: 17px;
+            cursor: pointer;
+
+            &__description{
+                text-align: center;
+                font-family: 'AnonymousPro';
+                height: 120px;
+            }
+        }
+
+
+
+        &__circle-small{
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            background-color: $black;
+            bottom: 4px;
+            right: -15px;
+            position: absolute;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &__title{
+                font-size: 0.9em;
+                line-height: 21px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__section6{
+        color: $white;
+        &__box{
+            margin-top: -80px;
+            background-color: $black;
+            padding-bottom: 80px;
+        }
+        &__text-right{
+            margin-top: 50px;
+            text-align: right;
+            font-family: 'AnonymousPro';
+        }
+
+    }
+
+    &__section7{
+        &__img{
+            width: 20px;
+        }
+    }
 }
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+    .landing{
+        &__section5{
+            &__circle{
+                height: 155px;
+                width: 155px;
+                font-size: 1em;
+                &__description{
+                    height: 255px;
+                }
+            }
+            &__circle-small{
+                bottom: -27px;
+                right: -23px;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .section5-movil{
+        &__content{
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    .landing{
+        &__hero{
+            &__box{
+                background-color: transparent;
+            }
+            &__box-content{
+                width: 90%;
+                background-color: $yellow;
+                padding: 30px 10px;
+            }
+        }
+        &__section4{
+            &__img{
+                width: 18px;
+            }
+            &__arrow-right{
+                margin-left: 5px;
+            }
+        }
+
+        &__section6{
+            .title{
+                margin-top: 30px;
+            }
+            &__box{
+                background-color: transparent;
+                padding-bottom: 40px;
+            }
+            &__box-black{
+                background-color: $black;
+            }
+            &__img{
+                width: 40%;
+            }
+            &__arrow{
+                width: 36px;
+                padding: 0px 10px;
+            }
+            &__text-right{
+                text-align: center;
+            }
+        }
+    }
+}
+
+

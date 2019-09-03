@@ -12,12 +12,32 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
-Route::post('/contact', 'MailController@sendContact');
 
+Route::get('/beneficios-y-planes', function () {
+    return view('beneficios');
+});
+
+Route::get('/sala-de-juntas', function () {
+    return view('sala_juntas');
+});
+
+Route::get('/ubicacion', function () {
+    return view('ubicacion');
+});
+
+Route::get('/contactanos', function () {
+    return view('contactanos');
+});
+
+/* Route::post('/contact', 'MailController@sendContact'); */
+Route::post('/contact/send', 'MailController@sendContact');
+Route::get('/gracias', function () {
+    return view('gracias');
+});
 
 Route::get('/home', function () {
-    return view('landing');
+    return view('welcome');
 });

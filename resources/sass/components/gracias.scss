@@ -1,0 +1,17 @@
+.gracias{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__title{
+        font-family: 'ObjectSans-Bold';
+        font-size: 2em;
+    }
+
+    &__description{
+
+    }
+}

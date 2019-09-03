@@ -1,0 +1,30 @@
+.contactanos{
+    min-height: 100vh;
+    color: white; 
+
+    &__img-btn{
+        width: 18px;
+    }
+}
+
+
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (min-width: 1920px) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-down(sm){
+    .contactanos{
+        .mat-input{
+            width: 100%;
+        }
+    }
+}
