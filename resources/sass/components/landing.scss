@@ -7,6 +7,9 @@ body{
     #map{
         height: 70vh;
     }
+    &__preguntas{
+        font-size: 1.4em;
+    }
     &__hero{
        /* background: url("/img/landing/Imagen_Home.png") no-repeat center;
         width: 100%;
@@ -20,13 +23,14 @@ body{
             align-items: center;
             margin-top: -70px;
             background-color: $yellow;
-            height: 150px;
+            height: 210px;
             font-size: 1.2em;
             text-align: center;
 
         }
         &__box-content{
-            width: 50%;
+            width: 65%;
+            padding: 85px 0px;
         }
     }
 
@@ -53,22 +57,30 @@ body{
     }
 
     &__section3{
+
         &__img{
             width: 10px;
         }
         &__title{
-            font-size: 1.2em;
+            font-size: 2em;
         }
     }
 
     &__section4{
+        margin-top: 85px;
         &__img{
             width: 30px;
+            cursor: pointer;
+        }
+        &__arrow-right{
+            margin-left: 40px;
         }
     }
 
     &__section5{
+        margin-top: 85px;
         background-color: $gray;
+        padding-bottom: 85px;
         &__circle{
             height: 200px;
             width: 200px;
@@ -86,7 +98,8 @@ body{
             &__description{
                 text-align: center;
                 font-family: 'AnonymousPro';
-                height: 120px;
+                height: 135px;
+                width: 98%;
             }
         }
 
@@ -119,7 +132,7 @@ body{
         &__box{
             margin-top: -80px;
             background-color: $black;
-            padding-bottom: 80px;
+            padding-bottom: 55px;
         }
         &__text-right{
             margin-top: 50px;
@@ -127,9 +140,19 @@ body{
             font-family: 'AnonymousPro';
         }
 
+        &__img{
+            width: 50%;
+        }
+
+        &__arrow{
+            width: 36px;
+            padding: 0px 10px;
+        }
+
     }
 
     &__section7{
+        margin-top: 85px;
         &__img{
             width: 20px;
         }
@@ -159,6 +182,11 @@ body{
                 right: -23px;
             }
         }
+        &__section4{
+            &__arrow-right{
+                margin-left: 23px;
+            }
+        }
     }
 }
 
@@ -183,6 +211,13 @@ body{
                 background-color: $yellow;
                 padding: 30px 10px;
             }
+        }
+        &__section3{
+                &__title{
+                    font-size: 1.5em;
+                    margin-top: 15px;
+                    line-height: 30px;
+                }
         }
         &__section4{
             &__img{

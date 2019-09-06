@@ -46,6 +46,6 @@ require ('./components/ubicacion');
 require ('./components/contactanos');
 require ('./components/contactanos');
 require ('./components/input_materialize');
-require ('./components/checkbox');
+/*require ('./components/checkbox');*/
 require ('./components/gracias');
 require ('./components/animate_title');

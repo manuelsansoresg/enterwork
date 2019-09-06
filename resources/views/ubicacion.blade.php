@@ -11,11 +11,11 @@
                             <p class="">
                                 <span class="title ubicacionTitle"></span>
                             </p>
-                            <p class="mt-4">
+                            <p class="mt-4 description">
                                 Además  de nuestras  amenidades, nuestra ubicación privilegiada en Plaza Odara te acerca a servicios casi infinitos:
                             </p>
                            <div class="animated fadeInLeft">
-                               <ul class="list-inline mt-4" >
+                               <ul class="list-inline mt-4 description" >
                                    <li class="list-inline">@include('arrow') Con amenidades en la plaza como restaurantes, bancos, barbería, estética para mascotas y más.</li>
                                    <li class="list-inline">@include('arrow') A menos de un kilómetro de Plaza Uptown, Plaza Altabrisa y el Hospital Star Médica.</li>
                                    <li class="list-inline">@include('arrow') A menos de 5 minutos de periférico.</li>
@@ -58,7 +58,9 @@
             </div>
             {{-- movil--}}
         </div>
-        <div id="map" class="mt-5"></div>
+        <div class="ubicacion__section2">
+            <div id="map" class="mt-5"></div>
+        </div>
         {{-- movil--}}
        <div class="container d-block d-md-none">
            <div class="row  mt-5">
@@ -77,15 +79,15 @@
            </div>
        </div>
         {{-- movil--}}
-        <div class="container">
-            <div class="row justify-content-center mt-5 mx-sm-0">
-                <div class="col-md-10">
-                    <img class="img-fluid" src="/img/ubicacion/Lugar.png" alt="">
+        <div class="ubicacion__section3">
+            <div class="container">
+                <div class="row justify-content-center mt-5 mx-sm-0">
+                    <div class="col-md-10">
+                        <img class="img-fluid" src="/img/ubicacion/Lugar.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="mt-5">
-        @include('section_contact')
-    </div>
+    @include('section_contact')
 @endsection

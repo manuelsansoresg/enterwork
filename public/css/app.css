@@ -9729,7 +9729,7 @@ h3 {
   margin-top: 20px;
 }
 .menu__logo {
-  width: 130px;
+  width: 155px;
   margin-top: 10px;
 }
 .menu li {
@@ -9738,6 +9738,53 @@ h3 {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item-active {
+  position: relative;
+  z-index: 1;
+}
+
+/*.nav-item-active a{
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+}*/
+.nav-item-active a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #FFFF66;
+  content: "";
+  transition: transform 0.3s;
+  transform: scale(0.85);
+}
+
+.nav-item a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #FFFF66;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+
+.nav-item a:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /******************************************************************************
@@ -9774,6 +9821,27 @@ h3 {
 
   .header {
     height: 60vh;
+  }
+}
+/******************************************************************************
+**  responsive
+*********************************************************************************
+*/
+@media (max-width: 767.98px) {
+  .nav-item-active a::after, .nav-item a::after {
+    left: 62px;
+    width: 60%;
+    top: 75%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem 1rem;
+  }
+
+  .navbar-nav .btn-warning {
+    padding: 1rem 0.75rem;
+    margin-bottom: 27px;
   }
 }
 .btn-warning {
@@ -9927,6 +9995,9 @@ body {
 .landing #map {
   height: 70vh;
 }
+.landing__preguntas {
+  font-size: 1.4em;
+}
 .landing__hero {
   /* background: url("/img/landing/Imagen_Home.png") no-repeat center;
    width: 100%;
@@ -9940,12 +10011,13 @@ body {
   align-items: center;
   margin-top: -70px;
   background-color: #FFFF66;
-  height: 150px;
+  height: 210px;
   font-size: 1.2em;
   text-align: center;
 }
 .landing__hero__box-content {
-  width: 50%;
+  width: 65%;
+  padding: 85px 0px;
 }
 .landing__section2__content-icons {
   width: 100%;
@@ -9970,13 +10042,22 @@ body {
   width: 10px;
 }
 .landing__section3__title {
-  font-size: 1.2em;
+  font-size: 2em;
+}
+.landing__section4 {
+  margin-top: 85px;
 }
 .landing__section4__img {
   width: 30px;
+  cursor: pointer;
+}
+.landing__section4__arrow-right {
+  margin-left: 40px;
 }
 .landing__section5 {
+  margin-top: 85px;
   background-color: #F6F6F6;
+  padding-bottom: 85px;
 }
 .landing__section5__circle {
   height: 200px;
@@ -9995,7 +10076,8 @@ body {
 .landing__section5__circle__description {
   text-align: center;
   font-family: "AnonymousPro";
-  height: 120px;
+  height: 135px;
+  width: 98%;
 }
 .landing__section5__circle-small {
   height: 90px;
@@ -10022,12 +10104,22 @@ body {
 .landing__section6__box {
   margin-top: -80px;
   background-color: #000;
-  padding-bottom: 80px;
+  padding-bottom: 55px;
 }
 .landing__section6__text-right {
   margin-top: 50px;
   text-align: right;
   font-family: "AnonymousPro";
+}
+.landing__section6__img {
+  width: 50%;
+}
+.landing__section6__arrow {
+  width: 36px;
+  padding: 0px 10px;
+}
+.landing__section7 {
+  margin-top: 85px;
 }
 .landing__section7__img {
   width: 20px;
@@ -10050,6 +10142,9 @@ body {
     bottom: -27px;
     right: -23px;
   }
+  .landing__section4__arrow-right {
+    margin-left: 23px;
+  }
 }
 @media (max-width: 767.98px) {
   .section5-movil__content {
@@ -10067,6 +10162,11 @@ body {
     width: 90%;
     background-color: #FFFF66;
     padding: 30px 10px;
+  }
+  .landing__section3__title {
+    font-size: 1.5em;
+    margin-top: 15px;
+    line-height: 30px;
   }
   .landing__section4__img {
     width: 18px;
@@ -10141,6 +10241,9 @@ body {
 .beneficios {
   min-height: 100vh;
 }
+.beneficios__section2 {
+  margin-top: 85px;
+}
 .beneficios__section2__box {
   padding: 20px 30px;
   text-align: center;
@@ -10168,12 +10271,18 @@ body {
   width: 40px;
   padding: 0px 10px;
 }
+.beneficios__section3 {
+  margin-top: 85px;
+}
 .beneficios__section3__icons {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 45px;
 }
 .beneficios__section3__description {
   font-size: 0.8em;
+}
+.beneficios__section4 {
+  margin-top: 85px;
 }
 .beneficios__section4 .card {
   border: none;
@@ -10181,6 +10290,19 @@ body {
 .beneficios__section4 .card-header {
   background-color: white;
   border-bottom: 2px solid #000 !important;
+}
+
+.accordion > .card:not(:first-of-type) .card-header:first-child {
+  background-color: white;
+  border-bottom: 2px solid #000 !important;
+  border-radius: 1px !important;
+}
+
+.accordion .card {
+  overflow: hidden;
+}
+.accordion .card-header {
+  margin-bottom: -1px;
 }
 
 /******************************************************************************
@@ -10200,12 +10322,16 @@ body {
   margin-top: -80px;
 }
 .sala-juntas__icons {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 45px;
 }
 .sala-juntas__description {
   font-size: 0.8em;
 }
+.sala-juntas__section2 {
+  margin-top: 85px;
+}
+
 /******************************************************************************
 **  responsive
 *********************************************************************************
@@ -10225,10 +10351,17 @@ body {
   min-height: 100vh;
 }
 .ubicacion #map {
+  margin-top: 85px;
   height: 70vh;
 }
 .ubicacion__img {
   width: 50%;
+}
+.ubicacion__section2 {
+  margin-top: 85px;
+}
+.ubicacion__section3 {
+  margin-top: 85px;
 }
 
 /******************************************************************************
@@ -10247,6 +10380,7 @@ body {
 .contactanos {
   min-height: 100vh;
   color: white;
+  margin-top: 85px;
 }
 .contactanos__img-btn {
   width: 18px;
@@ -10263,7 +10397,7 @@ body {
 }
 .mat-input {
   margin: 2% auto;
-  width: 50%;
+  width: 70%;
 }
 
 .mat-input-outer {
@@ -10346,240 +10480,165 @@ body {
   outline: none;
 }
 
-*,
-*:after,
-*::before {
-  box-sizing: border-box;
-}
-
-.ac-custom {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.ac-custom h2 {
-  font-size: 3em;
-  font-weight: 300;
-  padding: 0 0 0.5em;
-  margin: 0 0 30px;
-}
-
-.ac-custom ul,
-.ac-custom ol {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.ac-custom li {
-  margin: 0 auto;
-  padding: 1em 0;
-  position: relative;
-}
-
-.ac-custom label {
+.radio-item {
   display: inline-block;
   position: relative;
-  color: white;
-  padding: 0 0 0 40px;
-  vertical-align: top;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: color 0.3s;
+  padding: 0 6px;
+  margin: 10px 0 0;
 }
 
-.ac-custom input[type=checkbox],
-.ac-custom input[type=radio],
-.ac-custom label::before {
-  width: 25px;
-  height: 25px;
-  top: 97%;
-  left: 0;
-  margin-top: -25px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.ac-custom input[type=checkbox],
-.ac-custom input[type=radio] {
-  opacity: 0;
-  -webkit-appearance: none;
-  display: inline-block;
-  vertical-align: middle;
-  z-index: 100;
-}
-
-.ac-custom label::before {
-  content: "";
-  border: 2px solid #fff;
-  transition: opacity 0.3s;
-}
-
-.ac-radio label::before {
-  border-radius: 50%;
-}
-
-.ac-custom input[type=checkbox]:checked + label,
-.ac-custom input[type=radio]:checked + label {
-  color: #fff;
-  opacity: 1;
-}
-
-.ac-custom input[type=checkbox]:checked + label::before,
-.ac-custom input[type=radio]:checked + label::before {
-  opacity: 0.8;
-}
-
-/* General SVG and path styles */
-.ac-custom svg {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 49%;
-  margin-top: -20px;
-  left: 5px;
-  pointer-events: none;
-}
-
-.ac-custom svg path {
-  stroke: #FFFF66;
-  stroke-width: 13px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-/* Specific input, SVG and path styles */
-/* Circle */
-.ac-circle input[type=checkbox],
-.ac-circle input[type=radio],
-.ac-circle label::before {
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  left: 10px;
-  position: absolute;
-}
-
-.ac-circle label::before {
-  background-color: #fff;
-  border: none;
-}
-
-.ac-circle svg {
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  left: -10px;
-}
-
-.ac-circle svg path {
-  stroke-width: 5px;
-}
-
-/* Box Fill */
-.ac-boxfill svg path {
-  stroke-width: 8px;
-}
-
-/* Swirl */
-.ac-swirl svg path {
-  stroke-width: 8px;
-}
-
-/* List */
-.ac-list ol {
-  list-style: decimal;
-  list-style-position: inside;
-}
-
-.ac-list ol li {
-  font-size: 2em;
-  padding: 1em 1em 0 2em;
-  text-indent: -40px;
-}
-
-.ac-list ol li label {
-  font-size: 1em;
-  text-indent: 0;
-  padding-left: 30px;
-}
-
-.ac-list label::before {
+.radio-item input[type=radio] {
   display: none;
 }
 
-.ac-list svg {
-  width: 100%;
-  height: 80px;
-  left: 0;
-  top: 1.2em;
-  margin-top: 0px;
-}
-
-.ac-list svg path {
-  stroke-width: 4px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 50em) {
-  section {
-    font-size: 80%;
-  }
-}
-/* checkbox */
-/* To Navigation Style */
-.codrops-top {
-  text-transform: uppercase;
-  width: 100%;
-  font-size: 0.69em;
-  line-height: 2.2;
-  font-weight: 700;
-}
-
-.codrops-top a {
-  text-decoration: none;
-  padding: 0 1em;
-  letter-spacing: 0.1em;
-  display: inline-block;
-}
-
-.codrops-top span.right {
-  float: right;
-}
-
-.codrops-top span.right a {
-  float: left;
-  display: block;
-}
-
-.codrops-icon:before {
-  font-family: "codropsicons";
-  margin: 0 4px;
-  speak: none;
-  font-style: normal;
+.radio-item label {
+  color: #fff;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
 }
 
-.codrops-icon-drop:before {
-  content: "\E001";
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid #fff;
+  background-color: transparent;
 }
 
-.codrops-icon-prev:before {
-  content: "\E004";
+.radio-item input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: transparent;
 }
 
-@media screen and (max-width: 25em) {
-  .codrops-icon span {
-    display: none;
-  }
+.radio-pink input[type=radio]:checked + label:after {
+  background: #FF66CC;
 }
-/* checkbox */
+
+.radio-pink2 input[type=radio]:checked + label:after {
+  background: #FF9999;
+}
+
+.radio-green input[type=radio]:checked + label:after {
+  background: #99FF66;
+}
+
+.radio-yellow input[type=radio]:checked + label:after {
+  background: #FFFF66;
+}
+
+.radio-blue input[type=radio]:checked + label:after {
+  background: #33CCFF;
+}
+
+.radio-white input[type=radio]:checked + label:after {
+  background: white;
+}
+
+/*@import './components/checbbox';*/
+#integration-list {
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+}
+
+#integration-list ul {
+  padding: 0;
+  margin: 20px 0;
+  color: black;
+}
+
+#integration-list ul > li {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#integration-list ul:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.expand {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+#left, #right {
+  display: table;
+}
+
+#sup {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+}
+
+.detail a {
+  text-decoration: none;
+  color: #C0392B;
+  border: 1px solid #C0392B;
+  padding: 6px 10px 5px;
+  font-size: 13px;
+  margin-right: 7px;
+}
+
+.detail {
+  margin: 10px 0 10px 0px;
+  display: none;
+  line-height: 22px;
+  height: 150px;
+}
+
+.detail span {
+  margin: 0;
+}
+
+.right-arrow {
+  margin-top: 12px;
+  margin-left: 20px;
+  width: 10px;
+  height: 100%;
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.icon {
+  height: 75px;
+  width: 75px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.london {
+  background: url("http://placehold.it/50x50") top left no-repeat;
+  background-size: cover;
+}
+
+.newyork {
+  background: url("http://placehold.it/50x50") top left no-repeat;
+  background-size: cover;
+}
+
+.paris {
+  background: url("http://placehold.it/50x50") top left no-repeat;
+  background-size: cover;
+}
+
 .gracias {
   width: 100%;
   min-height: 80vh;
@@ -10701,6 +10760,10 @@ body {
   color: #000;
 }
 
+.description {
+  font-size: 1.2em;
+}
+
 .object-bold {
   font-family: "ObjectSans-Bold";
 }
@@ -10725,6 +10788,17 @@ body {
   background-color: black;
 }
 
+.icon_social {
+  transition: transform 0.2s;
+  /* Animation */
+}
+
+.icon_social:hover {
+  /* IE 9 */
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
 /******************************************************************************
 **  responsive
 *********************************************************************************
@@ -10732,5 +10806,9 @@ body {
 @media (max-width: 767.98px) {
   .title {
     font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 1em;
   }
 }

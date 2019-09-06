@@ -1,3 +1,5 @@
+import AOS from "aos";
+
 $( document ).ready(function()
 {
     if ( $("#map").length > 0 ) {
@@ -23,8 +25,16 @@ $( document ).ready(function()
 
     if ($(".landing").length > 0) {
         var isMovil = false;
-
-
+        /* funcion posicionamiento scroll*/
+        function isScrolledIntoView(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+            return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+        /* funcion posicionamiento scroll*/
+        AOS.init({disable: 'mobile'});
 
         $('.header').css({
             'background': "url('/img/landing/Imagen_Home.png') no-repeat center",
@@ -50,12 +60,36 @@ $( document ).ready(function()
                 'height': '60vh'
             });
         }
+
+        var landingIcons = 0;
+        $(window).scroll(function () {
+
+            if (isScrolledIntoView($('.landing__section2__icons'))) {
+                landingIcons = landingIcons + 1;
+                //the div is now visible to user. here add your script
+
+                if (landingIcons == 1){
+                    testAnim('bounceIn', 'landing__section2__icons');
+                }
+
+
+            }
+
+        });
     }
+
+
+
 
     if ($(".landing__section5").length > 0) {
         window.invertColorCircle = function (colorOrginal , colorChange, circleBig, circleSmall, isOver) {
            if(isOver){
                 $('.' + circleBig + '').removeClass('bg-black');
+
+
+                if(colorOrginal == 'bg-yellow'){
+                    $('.title-yellow').addClass('text-body');
+                }
                 $('.' + circleBig + '').addClass('text-white');
 
                 $('.' + circleBig + '').removeClass(colorOrginal);
@@ -65,6 +99,9 @@ $( document ).ready(function()
                 $('.' + circleBig + '').addClass(colorChange);
                 $('.' + circleSmall + '').addClass(colorOrginal);
            }else{
+               if(colorOrginal == 'bg-yellow'){
+                   $('.title-yellow').removeClass('text-body');
+               }
                 $('.' + circleBig + '').removeClass('bg-black');
                 $('.' + circleSmall + '').removeClass('bg-black');
                 $('.' + circleBig + '').removeClass('text-white');
@@ -90,8 +127,9 @@ $( document ).ready(function()
     * funcion para la navegacion
     * */
     var cualvemos = 0;
+
     function mover(direccion) {
-        var title = ['Desk <br> Service', 'Meeting <br> Rooms', 'Coworking', 'Private'];
+        var title = ['Virtual <br> Offices', 'Meeting <br> Rooms', 'Coworking', 'Private'];
         var price = ['$900', '$200', '$2,000', '$8,000'];
         var description = [
             ' Recepción de correspondencia<br>\n' +
@@ -147,6 +185,47 @@ $( document ).ready(function()
             image.fadeIn('fast');
         });*/
 
+
+    }
+
+    $( ".next-slider" ).click(function() {
+
+        moverSlider(1);
+    });
+
+    $( ".preview-slider" ).click(function() {
+        moverSlider(-1);
+    });
+
+
+    var cualvemosSlider = 0;
+    function moverSlider(direccion) {
+
+        var slider = ['/img/landing/slider/RECEPCION.jpg', '/img/landing/slider/FACHADA.jpg', '/img/landing/slider/COWORK.jpg'];
+        var titles = ['Recepción', 'Fachada', 'Cowork'];
+        var ultima = slider.length-1;
+        var auxiliar = cualvemosSlider + direccion; // se sumará 1 o se restará 1 al índice
+        // si el resultado es menor que cero, le decimos que vaya al otro extremo y muestre la ultima
+        if(auxiliar < 0) {
+            auxiliar = ultima;
+        }
+        // si el resultado es mayor que la última, le decimos que vaya al otro extremo y muestre la primera
+        if(auxiliar > ultima) {
+            auxiliar = 0;
+        }
+        // listo, ahora ya podemos cambiar el dato sin problemas
+        cualvemosSlider = auxiliar;
+        var image = $("#imgSlider");
+        /*image.fadeOut('fast', function () {
+            image.attr('src', slider[cualvemosSlider]);
+            image.fadeIn('fast');
+        });*/
+        $('#imgSlider')
+            .fadeOut(400, function() {
+                $("#imgSlider").attr('src',slider[cualvemosSlider]);
+                $('#slider-description').html(titles[cualvemosSlider]);
+            })
+            .fadeIn(400);
 
     }
 });

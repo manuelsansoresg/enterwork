@@ -3,7 +3,7 @@ import AOS from "aos";
 $(document).ready(function () {
     if ( $(".sala-juntas").length > 0 ) {
 
-        AOS.init();
+        AOS.init({disable: 'mobile'});
 
         /* funcion posicionamiento scroll*/
         function isScrolledIntoView(elem) {

@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12 landing__hero__box">
                 <div class="landing__hero__box-content">
-                    <p>Somos espacios de trabajo que miran hacia el futuro y a la vez hacia el conjunto diverso de la vida. Porque no hay trabajo sin todo lo demás, ni todo lo demás sin un gran trabajo.</p>
+                    <p class="description">Somos espacios de trabajo que miran hacia el futuro y a la vez hacia el conjunto diverso de la vida. Porque no hay trabajo sin todo lo demás, ni todo lo demás sin un gran trabajo.</p>
                 </div>
             </div>
         </div>
@@ -20,11 +20,13 @@
         <div class="container">
             <div class="row mt-5 justify-content-center">
                 <div class="col-12 col-md-10">
-                    <input type="hidden" id="landing-title1" value="<span>Enter_ <span class='d-block d-md-flex'></span> your new office.</span>">
+                    <input type="hidden" id="landing-title1" value="<span>Enter_ <span class='d-block d-md-inline'></span> your new office.</span>">
                     <div class="w-100 d-block d-md-none mt-5"></div>
-                    <span class="title mt-5 mt-md-0 landing-title1" ></span>
+                    <p class="mt-5">
+                        <span class="title mt-5 mt-md-0 landing-title1" ></span>
+                    </p>
                     <div class="w-100 d-block d-md-none mt-2"></div>
-                    <p>
+                    <p class="description mt-4">
                         Enter_work te ofrece mucho más que un escritorio o una oficina, nuestros espacios de trabajo son flexibles y modernos, con amenidades y servicios especialmente diseñados para ayudarte a concentrarte, colaborar, aprender, socializar y prosperar.
                     </p>
                 </div>
@@ -35,31 +37,31 @@
                         <div class="row">
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Espacios_Coworking')
-                                <p class="">Espacios Coworking</p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500">Espacios Coworking</p>
                             </div>
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Oficinas_Privadas')
-                                <p>Oficinas <span class="d-md-block"></span> Privadas</p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500">Oficinas <span class="d-md-block"></span> Privadas</p>
                             </div>
 
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Salas_juntas')
-                                <p>Salas de <span class="d-md-block"></span>Juntas</p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500">Salas de <span class="d-md-block"></span>Juntas</p>
                             </div>
                             <div class="d-block d-md-none w-100 mt-4">
 
                             </div>
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Coffe_Bar')
-                                <p> Coffee<span class="d-md-block"></span> Bar </p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500"> Coffee<span class="d-md-block"></span> Bar </p>
                             </div>
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Roof_Terrance')
-                                <p>Roof<span class="d-md-block"></span> Terrace</p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500">Roof<span class="d-md-block"></span> Terrace</p>
                             </div>
                             <div class="col-4 col-md-2 text-center">
                                 @include('lading_svg.Espacios_virtuales')
-                                <p>Espacios<span class="d-md-block"></span> Virtuales </p>
+                                <p class="mt-4" data-aos="fade-up" data-aos-duration="1500">Oficinas<span class="d-md-block"></span> Virtuales </p>
                             </div>
                         </div>
                     </div>
@@ -79,7 +81,7 @@
             {{-- columna movil--}}
             <div class="row mt-5">
                 <div class="col-12 col-md-8 offset-md-1">
-                    <p>Cuando te conviertes en un miembro de Enter_work, no solo has encontrado un nuevo espacio de trabajo, ¡tu membresía incluye acceso a excelentes comodidades! Estos son solo algunos de los servicios que vienen con todos nuestros planes:
+                    <p class="description mt-5">Cuando te conviertes en un miembro de Enter_work, no solo has encontrado un nuevo espacio de trabajo, ¡tu membresía incluye acceso a excelentes comodidades! Estos son solo algunos de los servicios que vienen con todos nuestros planes:
                     </p>
                 </div>
             </div>
@@ -99,8 +101,8 @@
                             <div class="col-md-6 align-self-center text-center d-none d-sm-block">
                                 <p class="object-bold landing__section3__title"> 360° life <span class="d-md-block"> at work</p>
                             </div>
-                            <div class="col-md-4">
-                                <ul class="list-inline">
+                            <div class="col-md-5">
+                                <ul class="list-inline description">
                                     <li class="list-inline"> @include('arrow') <span class="ml-2"> Roof Terrace </span></li>
                                     <li class="list-inline"> @include('arrow') <span class="ml-2"> Coffee Bar</span> </li>
                                     <li class="list-inline"> @include('arrow') <span class="ml-2"> Eventos de Networking</span> </li>
@@ -125,18 +127,18 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-1 align-self-center">
-                    <img class="landing__section4__img" src="/img/landing/Flecha_Izq.svg" alt="">
+                    <img  class="landing__section4__img preview-slider" src="/img/landing/Flecha_Izq.svg" alt="">
                 </div>
                 <div class="col-10">
-                    <img class="img-fluid" src="img/landing/Recepcion.png" alt="">
+                    <img  id="imgSlider" class="img-fluid" src="img/landing/slider/RECEPCION.jpg" alt="">
                 </div>
                 <div class="col-1 align-self-center ml-n4 ml-md-n0">
-                    <img class="landing__section4__img landing__section4__arrow-right" src="/img/landing/Flecha_Der.svg" alt="">
+                    <img class="landing__section4__img landing__section4__arrow-right next-slider" src="/img/landing/Flecha_Der.svg" alt="">
                 </div>
             </div>
             <div class="row mt-3 pb-4 pb-md-0">
-                <div class="col-12 text-center">
-                    Recepción
+                <div class="col-12 text-center description">
+                    <span id="slider-description">Recepción</span>
                 </div>
             </div>
         </div>
@@ -153,24 +155,24 @@
             <div class="row justify-content-center ">
                 <div class="col-12 col-md-12 landing__section6__box">
                     <div class="container landing__section6__box-black">
-                        <div class="row mt-5">
+                        <div class="row">
                             <div class="col-12 col-md-6 offset-md-1">
                                 <input type="hidden" id="landing-title2" value="Enter_ <span class='d-block d-md-inline'></span> Plaza Odara.">
-                                <div class="w-100 pb-3"></div>
-                                <span class="title text-white landing-title2"></span>
-                                <div class="w-100 pb-3"></div>
-                                <p>
+                                <p class="mt-5">
+                                    <span class="title text-white landing-title2"></span>
+                                </p>
+                                <p class="mt-4 description">
                                     Además de nuestras amenidades, nuestra ubicación privilegiada en Plaza Odara te acerca a servicios casi infinitos:
                                 </p>
-                                <p>
-                                    <img class="landing__section6__arrow d-inline d-md-none" src="/img/landing/Flecha_Movil.svg" alt="">Con amenidades en la plaza como restaurantes, bancos, barbería, estética para mascotas y más.
-                                    <br><img class="landing__section6__arrow d-inline d-md-none" src="/img/landing/Flecha_Movil.svg" alt=""> A menos de un kilómetro de Plaza Uptown, Plaza Altabrisa y el Hospital Star Médica.
-                                    <br><img class="landing__section6__arrow d-inline d-md-none" src="/img/landing/Flecha_Movil.svg" alt=""> A menos de 5 minutos de periférico
+                                <p class="description mt-4">
+                                    <img class="landing__section6__arrow " src="/img/landing/Flecha_Movil.svg" alt="">Con amenidades en la plaza como restaurantes, bancos, barbería, estética para mascotas y más.
+                                    <br><img class="landing__section6__arrow " src="/img/landing/Flecha_Movil.svg" alt=""> A menos de un kilómetro de Plaza Uptown, Plaza Altabrisa y el Hospital Star Médica.
+                                    <br><img class="landing__section6__arrow " src="/img/landing/Flecha_Movil.svg" alt=""> A menos de 5 minutos de periférico
 
                                 </p>
 
                             </div>
-                            <div class="col-12 col-md-3 offset-md-1">
+                            <div class="col-12 col-md-3 offset-md-1 align-self-center">
                                 <div class="text-center text-md-right">
                                     <img class="img-fluid landing__section6__img" src="/img/landing/01_ODARA.png" alt="">
                                 </div>

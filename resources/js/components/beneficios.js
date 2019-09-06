@@ -2,13 +2,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import  'animate.css';
 import Typed from "typed.js";
+import  Swiper  from 'swiper';
+import 'swiper/dist/css/swiper.min.css';
 
 $(document).ready(function () {
 
     if ( $(".beneficios").length > 0 ) {
         $('.menu__logo').attr('src', '/img/Enter_Negro.svg');
 
-        AOS.init();
+
         /* funcion posicionamiento scroll*/
         function isScrolledIntoView(elem) {
             var docViewTop = $(window).scrollTop();
@@ -31,10 +33,19 @@ $(document).ready(function () {
         myFunction(x); // Call listener function at run time
         x.addListener(myFunction); // Attach listener function on state changes
 
+        AOS.init({disable: 'mobile'});
+
         if(isMovil){
             $('.header').css({
                 'height': '25vh'
             });
+            var mySwiper = new Swiper ('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true
+            })
+        }else{
+
         }
         var beneficiosIcos = 0;
         $(window).scroll(function () {
@@ -51,5 +62,18 @@ $(document).ready(function () {
             }
 
         });
+        /* acordeon*/
+        $(".expand").on( "click", function() {
+            $(this).next().slideToggle(200);
+            var $expand;
+            $expand = $(this).find(">:first-child");
+
+            if($expand.text() == "+") {
+                $expand.text("-");
+            } else {
+                $expand.text("+");
+            }
+        });
+        /* acordeon*/
     }
 });

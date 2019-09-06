@@ -3,29 +3,29 @@
 @section('content')
     <div class="contactanos">
         <div class="container">
-            <div class="row mt-3">
+            <div class="row">
                 <div class="col-12 text-center">
                     <p class="title text-white">Contacto</p>
                 </div>
             </div>
             <div class="row mt-1 mt-md-5">
-                <div class="col-12 col-md-4 offset-md-1">
-                   <p>
+                <div class="col-12 col-md-5 offset-md-1 mt-3">
+                   <p class="description">
                         Contáctanos por nuestro formulario o directamente por teléfono, correo electrónico o por alguna de nuestras redes
                         sociales para más información.
                     </p>
-                    <p class="object-bold d-none d-md-block">
+                    <p class="object-bold d-none d-md-block mt-5">
                         +52 (998) 154 3834 <br>
                         hola@enterwork.mx
                     </p>
                     <p class="d-none d-md-block">
-                        <a href="https://www.facebook.com/EnterWorkMX" target="_blank"><img class=" ml-2  footer__social"
+                        <a href="https://www.instagram.com/enter_work/" target="_blank"><img class=" ml-2  footer__social icon_social"
                                 src="/img/IG_Blanco.svg" alt=""></a>
-                        <a href="https://www.instagram.com/enter_work/" target="_blank"><img class=" ml-2 footer__social"
+                        <a href="https://www.facebook.com/EnterWorkMX" target="_blank"><img class=" ml-2 footer__social icon_social"
                                 src="/img/FB_Blanco.svg" alt=""></a>
                     </p>
                 </div>
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-6 mt-3">
                     <form id="contactanos" autocomplete="off">
                         <div class="mat-input mt-n3">
                             <div class="mat-input-outer">
@@ -67,22 +67,39 @@
                                 Estoy interesado/a en:*
                             </p>
                             <div class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
-                                <ul>
-                                    <li><input id="cb1" name="interesado[]" value="Contratar Desk Service" type="checkbox"><label for="cb1">Contratar Desk Service
-                                        </label></li>
-                                    <li><input id="cb2" name="interesado[]" value="Rentar un Meeting Room" type="checkbox"><label for="cb2">Rentar un Meeting Room
-                                        </label></li>
-                                    <li><input id="cb3" name="interesado[]" value="Contratar un espacio compartido" type="checkbox"><label for="cb3">Contratar un espacio compartido
-                                        </label></li>
-                                    <li><input id="cb4" name="interesado[]" value="Contratar una oficina privada" type="checkbox"><label for="cb4">Contratar una oficina privada
-                                        </label></li>
-                                    <li><input id="cb5" name="interesado[]" value="Organizar un evento" type="checkbox"><label for="cb5">Organizar un evento
-                                        </label></li>
-                                    <li><input id="cb6" name="interesado[]" value="Otro" type="checkbox"><label for="cb6">Otro
-                                        </label></li>
-                                    <ul>
-                            </div>  
-                            
+                                <div class="radio-item radio-pink">
+                                    <input type="radio" id="interesado"  name="interesado[]" value="Contratar Desk Service">
+                                    <label for="interesado">Contratar Desk Service</label>
+                                </div>
+
+                                <div class="radio-item radio-pink2">
+                                    <input type="radio" id="interesado2" name="interesado[]" value="Rentar un Meeting Room">
+                                    <label for="interesado2">Rentar un Meeting Room</label>
+                                </div>
+
+                                <div class="radio-item radio-yellow">
+                                    <input type="radio" id="interesado3" name="interesado[]" value="Contratar un espacio compartido">
+                                    <label for="interesado3">Contratar un espacio compartido</label>
+                                </div>
+
+                                <div class="radio-item radio-green">
+                                    <input type="radio" id="interesado4" name="interesado[]" value="Contratar una oficina privada">
+                                    <label for="interesado4">Contratar una oficina privada</label>
+                                </div>
+
+                                <div class="radio-item radio-blue">
+                                    <input type="radio" id="interesado5" name="interesado[]" value="Organizar un evento">
+                                    <label for="interesado5">Organizar un evento</label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="radio-item radio-white">
+                                    <input type="radio" id="interesado6" name="interesado[]" value="Otro">
+                                    <label for="interesado6">Otro</label>
+                                </div>
+
+
+                            </div>
+
                         </div>
                        <div class="row">
                            <div class="col-12 text-center">
@@ -92,14 +109,16 @@
                                     </div>
                                 </div>
                            </div>
-                            <div class="col-12 col-md-4 offset-md-3">
-                            * Campos obligatorios
-                            </div>
-                            <div class="col-12 col-md-5 mt-3 mt-md-0 text-center text-md-left">
-                                <button type="button" onclick="sendContact()" class="btn btn-warning btn-sectionCircle col-9 col-md-10 col-lg-6">Enviar @include('arrow')</button>
-                            </div>
+                           <div class="w-100 pb-5"></div>
+                           <div class="col-12 col-md-4 offset-md-2 text-md-left align-self-center ">
+                               * Campos obligatorios
+                           </div>
+
+                           <div class="col-12 col-md-6 mt-3 mt-md-0 text-center text-md-left">
+                               <button type="button" onclick="sendContact()" class="btn btn-warning btn-sectionCircle col-8 col-md-7 col-lg-7">Enviar @include('arrow')</button>
+                           </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>

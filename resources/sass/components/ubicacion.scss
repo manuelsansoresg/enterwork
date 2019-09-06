@@ -1,10 +1,17 @@
 .ubicacion{
     min-height: 100vh;
     #map{
+        margin-top: 85px;
         height: 70vh;
     }
     &__img{
         width: 50%;
+    }
+    &__section2{
+        margin-top: 85px;
+    }
+    &__section3{
+        margin-top: 85px;
     }
 }
 /******************************************************************************

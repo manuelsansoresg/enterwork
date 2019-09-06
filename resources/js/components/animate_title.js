@@ -1,4 +1,8 @@
-import Typed from 'typed.js';
+import Typed from 'typed.js'
+
+/**
+ * contadores para controlar que aparezca 1 sola vez el elemento al llegar a la posicion
+ */
 var contLandingTitle1 = 0;
 var contLandingTitle2 = 0;
 var contsectionPlans1 = 0;
@@ -8,19 +12,15 @@ var contsalaTitle1 = 0;
 var contubicacionTitle1 = 0;
 var contubicacionTitleMovil1 = 0;
 
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 if ( $(".landing").length > 0 ){
-    function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
-    /**
-     * contadores para controlar que aparezca 1 sola vez el elemento al llegar a la posicion
-     */
-
 
 
     $(window).scroll(function () {
@@ -53,19 +53,7 @@ if ( $(".landing").length > 0 ){
 
         }
 
-        if (isScrolledIntoView($('.sectionPlans-title1'))) {
-            contsectionPlans1 = contsectionPlans1 + 1;
-            //the div is now visible to user. here add your script
-            if (contsectionPlans1 == 1){
-                var typed = new Typed('.sectionPlans-title1', {
-                    strings: ["", $('#sectionPlans-title1').val()],
-                    typeSpeed: 50,
-                    contentType: 'html',
-                    running: true
-                });
-            }
 
-        }
 
         if (isScrolledIntoView($('.sectionPlans-title1Movil'))) {
             contsectionPlans1Movil = contsectionPlans1Movil + 1;
@@ -81,26 +69,9 @@ if ( $(".landing").length > 0 ){
 
         }
 
-        if (isScrolledIntoView($('.sectionContact'))) {
-            contsectionContact = contsectionContact + 1;
-            //the div is now visible to user. here add your script
-            if (contsectionContact == 1){
-                var typed = new Typed('.sectionContact', {
-                    strings: ["", $('#sectionContact').val()],
-                    typeSpeed: 50,
-                    contentType: 'html',
-                    running: true
-                });
-            }
-
-        }
-
-        /* sala*/
-        if (isScrolledIntoView($('.salaSection1Title'))) {
 
 
-        }
-        /* sala*/
+
 
     });
 }
@@ -117,6 +88,43 @@ if ( $(".beneficios-title1").length > 0 ){
         running: true
     });
 
+}
+
+if ( $(".sectionContact").length > 0 ) {
+    $(window).scroll(function () {
+        if (isScrolledIntoView($('.sectionContact'))) {
+            contsectionContact = contsectionContact + 1;
+            //the div is now visible to user. here add your script
+            if (contsectionContact == 1) {
+                var typed = new Typed('.sectionContact', {
+                    strings: ["", $('#sectionContact').val()],
+                    typeSpeed: 50,
+                    contentType: 'html',
+                    running: true
+                });
+            }
+
+        }
+    });
+}
+
+if ( $(".sectionPlans-title1").length > 0 ) {
+    $(window).scroll(function () {
+        if (isScrolledIntoView($('.sectionPlans-title1'))) {
+
+            contsectionPlans1 = contsectionPlans1 + 1;
+            //the div is now visible to user. here add your script
+            if (contsectionPlans1 == 1) {
+                var typed = new Typed('.sectionPlans-title1', {
+                    strings: ["", $('#sectionPlans-title1').val()],
+                    typeSpeed: 50,
+                    contentType: 'html',
+                    running: true
+                });
+            }
+
+        }
+    });
 }
 /* beneficios*/
 

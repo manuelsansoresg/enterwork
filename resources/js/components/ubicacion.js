@@ -26,8 +26,8 @@ $( document ).ready(function()
     }
 
     if ( $(".ubicacion").length > 0 ) {
-        AOS.init();
-
+        AOS.init({disable: 'mobile'});
+        $('.menu__logo').attr('src', '/img/Enter_Negro.svg');
         var isMovil = false;
         /* saber si viene de escritorio o movil */
         function myFunction(x) {

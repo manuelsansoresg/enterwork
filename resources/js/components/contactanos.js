@@ -5,7 +5,7 @@ $(document).ready(function () {
             'color': "white",
         });
         window.sendContact = function name() {
-            
+
             let myForm   = document.getElementById('contactanos');
             let formData = new FormData(myForm);
             var Swal     = require('sweetalert2');
@@ -15,20 +15,20 @@ $(document).ready(function () {
             axios.post
                 ('/contact/send', formData)
                 .then(function (response) {
-                    
+
                     $('#spinner-contacto').hide();
-                    
+
                     document.getElementById('contactanos').reset();
                     window.location = '/gracias';
-                    
+
 
                 })
                 .catch(function (error) {
-                
+
                     var result = error.response.data;
-                
+
                     $('#spinner-contacto').hide();
-                
+
                     Swal.fire({
                         title: '¡Error!',
                         text: 'Los campos marcados con * son obligatorios',
@@ -55,9 +55,9 @@ $(document).ready(function () {
 
         if (isMovil) {
             $('.header').css({
-                'height': '25vh'
+                'height': '15vh'
             });
         }
-        
+
     }
 });

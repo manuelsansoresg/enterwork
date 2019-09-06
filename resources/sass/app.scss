@@ -17,7 +17,9 @@
 @import './components/ubicacion';
 @import './components/contactanos';
 @import './components/input_materialize';
-@import './components/checbbox';
+@import './components/radiobutton';
+/*@import './components/checbbox';*/
+@import './components/accordeon';
 @import './components/gracias';
 @import './components/animation/title';
 
@@ -27,6 +29,10 @@
     font-family: 'ObjectSans-Bold';
     font-size: 2.1em;
     color: $black;
+}
+
+.description{
+    font-size: 1.2em;
 }
 
 .object-bold{
@@ -53,6 +59,14 @@
     background-color: black;
 }
 
+.icon_social{
+    transition: transform .2s; /* Animation */
+}
+.icon_social:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
 
 /******************************************************************************
 **  responsive
@@ -71,4 +85,8 @@
     .title{
         font-size: 1.5em;
     }
+    .description{
+        font-size: 1em;
+    }
+
 }
