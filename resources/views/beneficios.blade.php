@@ -39,9 +39,9 @@
                 <div class="col-12 col-md-4">
                     <img class="img-fluid" src="/img/beneficios/Coffe.png" alt="">
                 </div>
-                <div class="col-12 col-md-4 beneficios__section2__box-pink beneficios__section2__box" onmouseout="document.getElementById('icon_pink').src='/img/beneficios/Coffe_Rosa.svg';" onmouseover="document.getElementById('icon_pink').src='/img/beneficios/Coffe_Negro.svg'">
+                <div class="col-12 col-md-4 beneficios__section2__box-pink2 beneficios__section2__box" onmouseout="document.getElementById('icon_pink').src='/img/beneficios/Coffe_Coral.svg';" onmouseover="document.getElementById('icon_pink').src='/img/beneficios/Coffe_Negro.svg'">
                     <p class="object-bold beneficios__section2__title mt-5">
-                        <img id="icon_pink" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Coffe_Rosa.svg"  > Coffee Bar & Roof Terrace</p>
+                        <img id="icon_pink" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Coffe_Coral.svg"  > Coffee Bar & Roof Terrace</p>
                     <p class="mt-5">
                         Porque a veces necesitamos un descanso, te ofrecemos estás dos áreas para tomar un espresso, aire fresco, platicar sobre nuevas ideas o realizar un evento.
                     </p>
@@ -50,9 +50,9 @@
                     <img class="img-fluid" src="/img/beneficios/Meeting.png" alt="">
                 </div>
 
-                <div class="col-12 col-md-4 beneficios__section2__box-blue beneficios__section2__box" onmouseout="document.getElementById('icon_blue').src='/img/beneficios/Virtual_Azul.svg';" onmouseover="document.getElementById('icon_blue').src='/img/beneficios/Virtual_Negro.svg'">
+                <div class="col-12 col-md-4 beneficios__section2__box-pink beneficios__section2__box" onmouseout="document.getElementById('icon_blue').src='/img/beneficios/Virtual_Magenta.svg';" onmouseover="document.getElementById('icon_blue').src='/img/beneficios/Virtual_Negro.svg'">
                     <p class="object-bold beneficios__section2__title mt-5">
-                        <img id="icon_blue" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Virtual_Azul.svg"  > Virtual Offices</p>
+                        <img id="icon_blue" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Virtual_Magenta.svg"  > Virtual Offices</p>
                     <p class="mt-5">
                         Obtén una dirección comercial con manejo de correspondecia, un número telefónico local, servicio de recepción de llamadas y más.
                     </p>
@@ -60,9 +60,9 @@
                 <div class="col-12 col-md-4">
                     <img class="img-fluid" src="/img/beneficios/Virtual.png" alt="">
                 </div>
-                <div class="col-12 col-md-4 beneficios__section2__box-pink2 beneficios__section2__box" onmouseout="document.getElementById('icon_pink2').src='/img/beneficios/Rooms_Cora.svg';" onmouseover="document.getElementById('icon_pink2').src='/img/beneficios/Rooms_Negro.svg'">
+                <div class="col-12 col-md-4 beneficios__section2__box-blue beneficios__section2__box" onmouseout="document.getElementById('icon_pink2').src='/img/beneficios/Rooms_Azul.svg';" onmouseover="document.getElementById('icon_pink2').src='/img/beneficios/Rooms_Negro.svg'">
                     <p class="object-bold beneficios__section2__title mt-5">
-                        <img id="icon_pink2" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Rooms_Cora.svg" >Meeting Rooms
+                        <img id="icon_pink2" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Rooms_Azul.svg" >Meeting Rooms
                     </p>
                     <p class="mt-5">
                         Nuestras salas de conferencias son flexibles y adaptables al número de personas, y están equipadas con pantallas interactivas y audio para tener reuniones presenciales y remotas.
@@ -113,7 +113,7 @@
                         </div>
                         <div class="col-12 col-md-4 beneficios__section2__box-yellow beneficios__section2__box" onmouseout="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Amarillo.svg';" onmouseover="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Negro.svg'">
                             <p class="object-bold beneficios__section2__title mt-1">
-                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Coffe_Rosa.svg"  >
+                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Coffe_Coral.svg"  >
 
                                 Coffee Bar & Roof Terrace
                             </p>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-12 col-md-4 beneficios__section2__box-yellow beneficios__section2__box" onmouseout="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Amarillo.svg';" onmouseover="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Negro.svg'">
                             <p class="object-bold beneficios__section2__title mt-1">
-                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Virtual_Azul.svg"  >
+                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Virtual_Magenta.svg"  >
                                 Virtual Offices
                             </p>
                             <p class="mt-2">
@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-12 col-md-4 beneficios__section2__box-yellow beneficios__section2__box" onmouseout="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Amarillo.svg';" onmouseover="document.getElementById('icon_yellow').src='/img/beneficios/Coworking_Negro.svg'">
                             <p class="object-bold beneficios__section2__title mt-1">
-                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Rooms_Cora.svg"  >
+                                <img id="icon_yellow" class="beneficios__section2__icons mt-n2" src="/img/beneficios/Rooms_Azul.svg"  >
                                 Meeting Rooms
                             </p>
                             <p class="mt-2">
@@ -207,7 +207,7 @@
                             <p class="mt-4 beneficios__section3__description" data-aos="fade-up" data-aos-duration="1500">Estacionamiento </p>
                         </div>
                         <div class="col-6 col-md-2 text-center">
-                            <img class="beneficios__section3__icons" src="/img/beneficios/seccion3/Recepción.svg" alt="">
+                            <img class="beneficios__section3__icons" src="/img/beneficios/seccion3/Recepcion.svg" alt="">
                             <p class="mt-4 beneficios__section3__description" data-aos="fade-up" data-aos-duration="1500">Recepción y Staff de Apoyo</p>
                         </div>
                         <div class="col-6 col-md-2 text-center">
@@ -222,7 +222,7 @@
                         <div class="col-md-12 w-100 pb-4 d-none d-md-block"></div>
 
                         <div class="col-6 col-md-2 text-center">
-                            <img class="beneficios__section3__icons" src="/img/beneficios/seccion3/Telefonía.svg" alt="">
+                            <img class="beneficios__section3__icons" src="/img/beneficios/seccion3/Telefonia.svg" alt="">
                             <p class="mt-4 beneficios__section3__description" data-aos="fade-up" data-aos-duration="1500">Telefonía personalizada</p>
                         </div>
                         <div class="col-6 col-md-2 text-center">

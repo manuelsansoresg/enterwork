@@ -105,7 +105,7 @@
                     <div class="landing__section5__circle-small circlePlansSmall4">
                         <div class="landing__section5__circle-small__title">
                             desde
-                            $8,000
+                            $9,000
                         </div>
                     </div>
                 </div>

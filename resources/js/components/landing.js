@@ -130,7 +130,7 @@ $( document ).ready(function()
 
     function mover(direccion) {
         var title = ['Virtual <br> Offices', 'Meeting <br> Rooms', 'Coworking', 'Private'];
-        var price = ['$900', '$200', '$2,000', '$8,000'];
+        var price = ['$900', '$200', '$2,000', '$9,000'];
         var description = [
             ' Recepción de correspondencia<br>\n' +
             '                    Contestación personalizada<br>\n' +
