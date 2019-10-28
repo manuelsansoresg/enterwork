@@ -225,7 +225,7 @@ $( document ).ready(function()
                 $("#imgSlider").attr('src',slider[cualvemosSlider]);
                 $('#slider-description').html(titles[cualvemosSlider]);
             })
-            .fadeIn(400);
+            .fadeIn(100);
 
     }
 });

@@ -41,3 +41,7 @@ Route::get('/gracias', function () {
 Route::get('/home', function () {
     return view('welcome');
 });
+
+Route::get('/aviso-de-privacidad', function () {
+    return view('aviso_privacidad');
+});

@@ -38,7 +38,7 @@
                 $classUbicacion_active = 'nav-item';
                 $classContacto_active = 'nav-item';
 
-                switch (request()->segment(1)){
+                switch (request()->segment(1)) {
                     case 'beneficios-y-planes':
                         $classBeneficios_active = 'nav-item-active';
                         break;
@@ -54,38 +54,38 @@
                 }
 
                 ?>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <i class="fas fa-bars {{ $text_hamburger }}"></i>
-                </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <i class="fas fa-bars {{ $text_hamburger }}"></i>
+                    </button>
 
-                <div class="collapse navbar-collapse collapse-movil" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse collapse-movil" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
 
-                    </ul>
-                    <div class="text-right d-block d-md-none mt-5">
-                        <a class="navbar-toggler text-body" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fas fa-times"></i></a>
+                        </ul>
+                        <div class="text-right d-block d-md-none mt-5">
+                            <a class="navbar-toggler text-body" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fas fa-times"></i></a>
+                        </div>
+
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="{{ $classBeneficios_active }}">
+                                <a class="nav-link  {{ $text_dark }} text-li-movil" href="/beneficios-y-planes"> Beneficios y Planes</a>
+                            </li>
+                            <li class="{{ $classSalas_active }}">
+                                <a class="nav-link {{ $text_dark }} text-li-movil" href="/sala-de-juntas">Salas de Juntas</a>
+                            </li>
+                            <li class="{{ $classUbicacion_active }}">
+                                <a class="nav-link {{ $text_dark }} text-li-movil " href="/ubicacion">Ubicación</a>
+                            </li>
+
+                            <li class="{{ $classContacto_active }}  ml-md-3">
+                                <a href="/contactanos" class="btn btn-warning"> ¡Contáctanos! </a>
+                            </li>
+
+                        </ul>
+
                     </div>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <li class="{{ $classBeneficios_active }}">
-                            <a class="nav-link  {{ $text_dark }} text-li-movil" href="/beneficios-y-planes"> Beneficios y Planes</a>
-                        </li>
-                        <li class="{{ $classSalas_active }}">
-                            <a class="nav-link {{ $text_dark }} text-li-movil" href="/sala-de-juntas">Salas de Juntas</a>
-                        </li>
-                        <li class="{{ $classUbicacion_active }}">
-                            <a class="nav-link {{ $text_dark }} text-li-movil " href="/ubicacion">Ubicación</a>
-                        </li>
-
-                        <li class="{{ $classContacto_active }}  ml-md-3">
-                            <a href="/contactanos" class="btn btn-warning"> ¡Contáctanos! </a>
-                        </li>
-
-                    </ul>
-
-                </div>
             </div>
         </nav>
     </div>
@@ -100,7 +100,9 @@
         </div>
         <div>
             <ul class="list-inline footer__ul">
-                <li class="list-inline-item">Aviso de privacidad </li>
+                <li class="list-inline-item">
+                    <a class="text-white" href="/aviso-de-privacidad" target="_blank">Aviso de privacidad</a>
+                </li>
                 <li class="list-inline-item">
                     Contáctanos: hola@enterwork.mx
                 </li>
